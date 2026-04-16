@@ -6,8 +6,13 @@ import siteConfig from '../src/config/content.js';
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const bridalContainer = document.querySelector('#pkg-bridal');
     const engagementContainer = document.querySelector('#pkg-engagement');
     const siderContainer = document.querySelector('#pkg-sider');
+
+    if (bridalContainer && siteConfig.pricing.packages) {
+        renderPackagePanel(bridalContainer, siteConfig.pricing.packages);
+    }
 
     if (engagementContainer && siteConfig.pricing.engagement) {
         renderPackagePanel(engagementContainer, siteConfig.pricing.engagement);

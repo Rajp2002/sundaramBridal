@@ -33,7 +33,7 @@ export const siteConfig = {
         email: 'sundarambridal001@gmail.com',
 
         location: 'Surat, Gujarat, India',
-        serviceArea: 'Surat & nearby areas in Gujarat',
+        serviceArea: 'Surat, Gujarat',
 
         responseTime: 'Within 2 hours (9am - 9pm IST)',
     },
@@ -175,57 +175,111 @@ export const siteConfig = {
 
         packages: {
             sectionTitle: 'Bridal Packages',
-            sectionSubtitle: 'Complete packages for your special day',
-
-            items: {
-                essential: {
-                    name: 'Essential',
-                    price: '₹12,000',
-                    priceSuffix: '+',
-                    badge: null,  // No badge
+            sectionSubtitle: 'Choose Your Perfect Package',
+            items: [
+                {
+                    name: 'Tier 1',
+                    price: '₹15,000',
                     features: [
-                        'HD Bridal Makeup',
-                        'Professional Hairstyling',
-                        'Saree / Lehenga Draping',
-                        'Touch-up Kit',
-                    ],
-                    ctaText: 'Enquire Now',
-                    ctaStyle: 'secondary',
+                        { text: 'Makeup', detail: '2× MAC, 1× HUDA' },
+                        { text: '3× Hairstyling' },
+                        { text: '3× Hair Accessories' },
+                        { text: '1× Lashes' },
+                        { text: 'Cream Waxing', detail: 'Hands + Legs' },
+                        { text: 'Facial', detail: 'As per skin type' },
+                        { text: '1× Jewellery' },
+                        { text: '3× Saree / Dupatta Draping' }
+                    ]
                 },
-
-                premium: {
-                    name: 'Premium',
-                    price: '₹22,000',
-                    priceSuffix: '+',
-                    badge: '⭐ Popular',
-                    featured: true,  // Highlighted card
+                {
+                    name: 'Tier 2',
+                    price: '₹25,000',
                     features: [
-                        'Everything in Essential',
-                        'Trial Session Included',
-                        'Airbrush Makeup Upgrade',
-                        'Groom Basic Styling',
-                        'Premium Product Line',
-                    ],
-                    ctaText: 'Book Now',
-                    ctaStyle: 'primary',
+                        { text: 'Makeup', detail: '2× MAC, 1× Bobbi Brown / NARS / Estée Lauder' },
+                        { text: '3× Hairstyling', detail: 'Hair Extensions' },
+                        { text: '3× Hair Accessories', detail: 'Flowers, Crystals' },
+                        { text: '3× Lashes' },
+                        { text: 'Cream Waxing', detail: 'Hands + Legs' },
+                        { text: 'Facial', detail: 'As per skin type' },
+                        { text: '3× Jewellery' },
+                        { text: '3× Saree / Dupatta Draping' },
+                        { text: 'Contact Lens', detail: '1×' },
+                        { text: 'Bridal Makeup Touch-up' }
+                    ]
                 },
-
-                platinum: {
-                    name: 'Platinum',
+                {
+                    name: 'Tier 3',
+                    price: '₹35,000',
+                    featured: true,
+                    badge: '⭐ Most Popular',
+                    features: [
+                        { text: 'Makeup', detail: '2× Bobbi Brown / NARS / Estée Lauder, 1× MAC' },
+                        { text: '3× Hairstyling', detail: 'Hair Extensions' },
+                        { text: '3× Hair Accessories', detail: 'Flowers, Crystals' },
+                        { text: '3× Lashes' },
+                        { text: 'Cream Waxing', detail: 'Hands + Legs' },
+                        { text: 'Facial', detail: 'Glossy Finish' },
+                        { text: '3× Jewellery' },
+                        { text: '3× Saree / Dupatta Draping' },
+                        { text: 'Contact Lens', detail: '2×' },
+                        { text: 'Bridal Makeup Touch-up' }
+                    ]
+                },
+                {
+                    name: 'Tier 4',
                     price: '₹45,000',
-                    priceSuffix: '+',
-                    badge: '👑 Best Value',
                     features: [
-                        'Everything in Premium',
-                        '3 Complete Looks (Engagement + Wedding + Reception)',
-                        'Pre-Bridal Spa Package',
-                        'Mehndi Artist Coordination',
-                        'Luxury Gift Kit',
-                    ],
-                    ctaText: 'Book Now',
-                    ctaStyle: 'primary',
+                        { text: 'Makeup', detail: '2× Bobbi Brown / NARS / Estée Lauder, 1× Laura Mercier / Dior' },
+                        { text: '3× Hairstyling', detail: 'Hair Extensions' },
+                        { text: '3× Hair Accessories', detail: 'Flowers, Crystals' },
+                        { text: '3× Lashes' },
+                        { text: 'Cream Waxing', detail: 'Hands + Legs' },
+                        { text: 'Facial', detail: 'Glossy Finish' },
+                        { text: '3× Jewellery', detail: '1× Haldi Jewellery' },
+                        { text: '3× Saree / Dupatta Draping' },
+                        { text: 'Contact Lens', detail: '3×' },
+                        { text: 'Nail Art' },
+                        { text: 'Bridal Makeup Touch-up' }
+                    ]
                 },
-            },
+                {
+                    name: 'Tier 5',
+                    price: '₹55,000',
+                    features: [
+                        { text: 'Makeup', detail: '2× Laura Mercier / Dior, 1× Bobbi Brown / NARS / Estée Lauder' },
+                        { text: '3× Hairstyling', detail: 'Hair Extensions' },
+                        { text: '3× Hair Accessories', detail: 'Flowers, Crystals, Moissanite Hair Brooch' },
+                        { text: '3× Lashes' },
+                        { text: 'Cream Waxing', detail: 'Full Body (Bikini Wax)' },
+                        { text: 'Advanced Facial', detail: 'O3+ Professional (Glossy Finish)' },
+                        { text: '3× Jewellery', detail: '1× Haldi Jewellery' },
+                        { text: '3× Saree / Dupatta Draping' },
+                        { text: 'Contact Lens', detail: '3×' },
+                        { text: 'Nail Art' },
+                        { text: 'Bridal Makeup Touch-up' }
+                    ]
+                },
+                {
+                    name: 'Tier 6',
+                    price: '₹65,000',
+                    featured: true,
+                    badge: '👑 Luxury',
+                    features: [
+                        { text: 'Makeup', detail: '2× Laura Mercier / Dior, 2× Bobbi Brown / NARS / Estée Lauder' },
+                        { text: '4× Hairstyling', detail: 'Hair Extensions' },
+                        { text: '4× Hair Accessories', detail: 'Flowers, Crystals, Moissanite Hair Brooch' },
+                        { text: '4× Lashes' },
+                        { text: 'Cream Waxing', detail: 'Full Body (Bikini Wax)' },
+                        { text: 'Luxury Facial', detail: 'O3+ Professional / FYC Professional' },
+                        { text: '4× Jewellery', detail: '1× Haldi Jewellery' },
+                        { text: '4× Saree / Dupatta Draping' },
+                        { text: '4× Contact Lens' },
+                        { text: 'Nail Art' },
+                        { text: 'Luxury Manicure & Pedicure' },
+                        { text: 'Bridal Makeup Touch-up' }
+                    ]
+                }
+            ]
         },
 
         // ------------------------------------------
@@ -252,7 +306,7 @@ export const siteConfig = {
                     name: 'Tier 2',
                     price: '₹7,500',
                     features: [
-                        { text: 'Makeup', detail: 'Huda Beauty' },
+                        { text: 'Makeup', detail: 'HUDA' },
                         { text: 'International Hairstyling' },
                         { text: 'Hair Extensions' },
                         { text: 'Hair Accessories' },
@@ -315,7 +369,7 @@ export const siteConfig = {
                     name: 'Tier 2',
                     price: '₹3,500',
                     features: [
-                        { text: 'Makeup', detail: 'MAC / Huda' },
+                        { text: 'Makeup', detail: 'MAC / HUDA' },
                         { text: 'Hairstyling', detail: 'Basic' }
                     ]
                 },
@@ -416,8 +470,6 @@ export const siteConfig = {
         { image: '/images/gallery/IMG_0808.jpg', caption: 'Lavender Elegance', category: 'reception' },
         { image: '/images/gallery/IMG_0809.jpg', caption: 'Lavender Detail Shot', category: 'reception' },
         { image: '/images/gallery/IMG_1222.jpg', caption: 'Teal Reception Glam', category: 'reception' },
-        { image: '/images/gallery/IMG_1238.jpg', caption: 'Glamorous Reception Look', category: 'reception' },
-        { image: '/images/gallery/IMG_1239.jpg', caption: 'Reception Evening Glow', category: 'reception' },
         { image: '/images/gallery/IMG_2043.jpg', caption: 'Cream Bridal Elegance', category: 'reception' },
         { image: '/images/gallery/IMG_2044.jpg', caption: 'Radiant Reception Portrait', category: 'reception' },
         { image: '/images/gallery/IMG_2468.jpg', caption: 'Evening Reception Glam', category: 'reception' },
@@ -438,7 +490,6 @@ export const siteConfig = {
         { image: '/images/gallery/IMG_1182.jpg', caption: 'Floral Hair Artistry', category: 'hairstyle' },
         { image: '/images/gallery/IMG_1187.jpg', caption: 'Bridal Profile Detail', category: 'hairstyle' },
         { image: '/images/gallery/IMG_1226.jpg', caption: 'Intricate Updo Detail', category: 'hairstyle' },
-        { image: '/images/gallery/IMG_1237.jpg', caption: 'Elegant Hair Ornament', category: 'hairstyle' },
         { image: '/images/gallery/IMG_1765.jpg', caption: 'Detailed Saree Drape & Hair', category: 'hairstyle' },
         { image: '/images/gallery/IMG_1768.jpg', caption: 'Stunning Floral Work', category: 'hairstyle' },
         { image: '/images/gallery/IMG_1783.jpg', caption: 'Engagement Hair Detail', category: 'hairstyle' },
@@ -452,10 +503,7 @@ export const siteConfig = {
         { image: '/images/gallery/IMG_2763.jpg', caption: 'Bridal Hairstyle', category: 'hairstyle' },
 
         // Saree Draping (12)
-        { image: '/images/gallery/IMG_1246.jpg', caption: 'Sophisticated Saree Look', category: 'saree-draping' },
-        { image: '/images/gallery/IMG_1271.jpg', caption: 'Professional Saree Drape', category: 'saree-draping' },
-        { image: '/images/gallery/IMG_1272.jpg', caption: 'Elegant Saree Pleats', category: 'saree-draping' },
-        { image: '/images/gallery/IMG_1273.jpg', caption: 'Perfect Saree Styling', category: 'saree-draping' },
+        { image: '/images/gallery/IMG_1246.jpg', category: 'saree-draping', caption: 'Sophisticated Saree Look' },
         { image: '/images/gallery/IMG_1586.jpg', caption: 'Elegant Saree Draping', category: 'saree-draping' },
         { image: '/images/gallery/IMG_1587.jpg', caption: 'Traditional Grace', category: 'saree-draping' },
         { image: '/images/gallery/IMG_1589.jpg', caption: 'Saree View Detail', category: 'saree-draping' },
@@ -480,7 +528,7 @@ export const siteConfig = {
             event: 'Wedding, November 2025',
             image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80',
             rating: 5,
-            quote: "The home service was a blessing! Getting ready at home with my mom and sisters made my wedding morning so special. The saree draping was absolutely perfect.",
+            quote: "The service was a blessing! Getting ready with my mom and sisters made my wedding morning so special. The saree draping was absolutely perfect.",
         },
         {
             name: 'Meera Desai',
@@ -593,8 +641,8 @@ export const siteConfig = {
 
     seo: {
         titleSuffix: ' | Sundaram Bridal Studio',
-        defaultDescription: 'Luxury home bridal makeup services in Surat. HD & airbrush makeup, professional saree draping, and complete bridal packages. Rated 5★ on Google. Book your trial today!',
-        keywords: 'bridal makeup artist surat, home bridal services surat, professional saree draping surat, best makeup artist surat, gujarati bridal makeup',
+        defaultDescription: 'Luxury bridal makeup services in Surat. HD & airbrush makeup, professional saree draping, and complete bridal packages. Rated 5★ on Google. Book your trial today!',
+        keywords: 'bridal makeup artist surat, bridal services surat, professional saree draping surat, best makeup artist surat, gujarati bridal makeup',
     },
 };
 
