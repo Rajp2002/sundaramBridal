@@ -1,0 +1,296 @@
+/* ==========================================================================
+   Gallery Component - Sundaram Bridal Studio
+   ========================================================================== */
+
+/* Gallery Container */
+.gallery {
+    padding: var(--section-padding-y) 0;
+}
+
+/* Gallery Filters */
+.gallery__filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-8); /* Added vertical breathing room */
+    margin-bottom: var(--space-12);
+}
+
+.gallery__filter {
+    padding: var(--space-3) var(--space-8); /* Increased padding so text doesn't hit the curved ends */
+    font-size: var(--text-base);            /* Increased text size */
+    font-family: var(--font-body);
+    font-weight: var(--font-semibold);      /* Slightly bolder for the larger text */
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    color: var(--color-gray-700);
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--duration-300) var(--ease-out);
+}
+
+.gallery__filter:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.gallery__filter.is-active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+}
+
+.gallery__filter:not(.is-active):hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold-dark);
+    transform: translateY(-2px);
+}
+
+/* Gallery Grid */
+.gallery__grid {
+    column-count: 3;
+    column-gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+    .gallery__grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery__grid {
+        column-count: 1;
+        column-gap: var(--space-4);
+    }
+}
+
+/* Gallery Item */
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    margin-bottom: var(--space-6);
+    break-inside: avoid-column;
+    display: inline-block;
+    width: 100%;
+}
+
+
+
+.gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-500) var(--ease-out);
+}
+
+.gallery__item:hover .gallery__image {
+    transform: scale(1.08);
+}
+
+/* Gallery Overlay */
+.gallery__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity var(--duration-300) var(--ease-out);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-6);
+}
+
+.gallery__item:hover .gallery__overlay {
+    opacity: 1;
+}
+
+.gallery__caption {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    color: var(--color-white);
+    margin-bottom: var(--space-1);
+}
+
+.gallery__category {
+    font-size: var(--text-sm);
+    color: var(--color-silver);
+    text-transform: capitalize;
+}
+
+/* Zoom Icon */
+.gallery__zoom {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: var(--radius-full);
+    color: var(--color-charcoal);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all var(--duration-300) var(--ease-out);
+}
+
+.gallery__item:hover .gallery__zoom {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.gallery__zoom svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ==========================================================================
+   Lightbox
+   ========================================================================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--duration-300) var(--ease-out);
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox__content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    transform: scale(0.9);
+    transition: transform var(--duration-300) var(--ease-out);
+}
+
+.lightbox.is-open .lightbox__content {
+    transform: scale(1);
+}
+
+.lightbox__image {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+}
+
+.lightbox__caption {
+    text-align: center;
+    padding: var(--space-4);
+    color: var(--color-white);
+}
+
+.lightbox__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-1);
+}
+
+.lightbox__category {
+    font-size: var(--text-sm);
+    color: var(--color-primary);
+}
+
+/* Lightbox Controls */
+.lightbox__close {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: var(--radius-full);
+    color: var(--color-charcoal);
+    cursor: pointer;
+    transition: all var(--duration-200);
+    z-index: 10;
+}
+
+.lightbox__close:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.lightbox__close svg {
+    width: 24px;
+    height: 24px;
+}
+
+.lightbox__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: var(--radius-full);
+    color: var(--color-charcoal);
+    cursor: pointer;
+    transition: all var(--duration-200);
+}
+
+.lightbox__nav:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.lightbox__nav--prev {
+    left: var(--space-4);
+}
+
+.lightbox__nav--next {
+    right: var(--space-4);
+}
+
+.lightbox__nav svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Lightbox Share */
+.lightbox__share {
+    position: absolute;
+    bottom: var(--space-4);
+    right: var(--space-4);
+}
+
+@media (max-width: 768px) {
+    .lightbox__nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .lightbox__nav--prev {
+        left: var(--space-2);
+    }
+
+    .lightbox__nav--next {
+        right: var(--space-2);
+    }
+}

@@ -1,0 +1,128 @@
+/* ==========================================================================
+   CSS Design Tokens - Sundaram Bridal Studio
+   ========================================================================== */
+
+:root {
+   /* ========================================
+     Core Brand Identity - Luxury & Heritage
+     ======================================== */
+
+   /* Primary Palette - Regal Purple (HSL) */
+   --color-purple-h: 275;
+   --color-purple-s: 40%;
+   --color-purple-l: 25%;
+   --color-purple: hsl(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l));
+   --color-purple-light: hsl(var(--color-purple-h), 50%, 45%);
+   --color-purple-dark: hsl(var(--color-purple-h), var(--color-purple-s), 15%);
+   --color-purple-50: hsla(var(--color-purple-h), var(--color-purple-s), var(--color-purple-l), 0.05);
+
+   /* Brand Accent - Pure White & Silver (HSL) */
+   --color-silver-h: 275;
+   --color-silver-s: 10%;
+   --color-silver-l: 95%;
+   --color-silver: hsl(var(--color-silver-h), var(--color-silver-s), var(--color-silver-l));
+   --color-silver-dark: #D1D1D1;
+
+   /* Core Action Colors */
+   --color-primary: var(--color-purple);
+   --color-secondary: var(--color-white);
+
+   /* Neutrals & Backgrounds */
+   --color-ivory: #FBFAFF;
+   --color-cream: #F7F5FF;
+   --color-white: #FFFFFF;
+   --color-charcoal: #1A1A1A;
+   --color-gray-700: #333333;
+   --color-gray-500: #666666;
+   --color-gray-300: #D1D1D1;
+   --color-gray-100: #F1F1F1;
+
+   /* Functional Colors */
+   --color-success: #2D5A27;
+   --color-error: #A01C1C;
+   --color-whatsapp: #25D366;
+   --color-whatsapp-dark: #128C7E;
+
+   /* Brand Accents - Gold & Blush */
+   --color-gold: #D4AF37;
+   --color-gold-dark: #B08D26;
+   --color-gold-bright: #E8C660;
+   --color-blush: #F5F0FF;
+   --color-blush-light: #FBFAFF;
+
+   /* Glassmorphism Tokens */
+   --glass-bg: rgba(255, 255, 255, 0.3);
+   --glass-bg-dark: rgba(26, 26, 26, 0.6);
+   --glass-border: rgba(147, 51, 234, 0.2);
+   --glass-blur: 6px;
+
+   /* Gradients */
+   --gradient-purple: linear-gradient(135deg, var(--color-purple-dark) 0%, var(--color-purple) 50%, var(--color-purple-dark) 100%);
+   --gradient-accent: linear-gradient(135deg, var(--color-white) 0%, var(--color-silver) 100%);
+   --gradient-blush: linear-gradient(135deg, #FBFAFF 0%, #F5F0FF 100%);
+   --gradient-hero: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%);
+
+   /* ========================================
+     Typography - Elegant & Timeless
+     ======================================== */
+   --font-heading: 'Cormorant Garamond', serif;
+   --font-body: 'Montserrat', sans-serif;
+   --font-accent: 'Great Vibes', cursive;
+
+   /* Font Sizes (Fluid Typography approach) */
+   --text-xs: 0.75rem;
+   --text-sm: 0.875rem;
+   --text-base: 1rem;
+   --text-lg: 1.125rem;
+   --text-xl: 1.25rem;
+   --text-2xl: 1.5rem;
+   --text-3xl: 2.25rem;
+   --text-4xl: 3rem;
+   --text-5xl: 3.75rem;
+   --text-6xl: 4.5rem;
+   --text-7xl: 6rem;
+
+   /* Font Weights */
+   --font-light: 300;
+   --font-normal: 400;
+   --font-medium: 500;
+   --font-semibold: 600;
+   --font-bold: 700;
+
+   /* Letter Spacing */
+   --tracking-tight: -0.02em;
+   --tracking-normal: 0em;
+   --tracking-wide: 0.05em;
+   --tracking-wider: 0.1em;
+   --tracking-widest: 0.2em;
+
+   /* ========================================
+     Shadows & Radius
+     ======================================== */
+   --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+   --shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.12);
+   --shadow-purple: 0 10px 30px rgba(107, 33, 168, 0.2);
+   
+   --radius-sm: 2px;
+   --radius-md: 4px;
+   --radius-lg: 8px;
+   --radius-full: 100px;
+
+   /* ========================================
+     Layout & Spacing
+     ======================================== */
+   --space-1: 0.25rem;
+   --space-2: 0.5rem;
+   --space-3: 0.75rem;
+   --space-4: 1rem;
+   --space-6: 1.5rem;
+   --space-8: 2rem;
+   --space-12: 3rem;
+   --space-16: 4rem;
+   --space-24: 6rem;
+   --space-32: 8rem;
+
+   --header-height: 100px;
+   --container-max-width: 1440px;
+}

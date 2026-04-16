@@ -1,0 +1,261 @@
+/* ==========================================================================
+   Form Components - Sundaram Bridal Studio
+   ========================================================================== */
+
+/* Form Container */
+.form {
+    max-width: 600px;
+}
+
+.form--centered {
+    margin: 0 auto;
+}
+
+/* Form Group */
+.form__group {
+    margin-bottom: var(--space-6);
+}
+
+.form__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+@media (max-width: 640px) {
+    .form__row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Labels */
+.form__label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-2);
+}
+
+.form__label--required::after {
+    content: ' *';
+    color: var(--color-error);
+}
+
+/* Inputs */
+.form__input,
+.form__textarea,
+.form__select {
+    display: block;
+    width: 100%;
+    padding: var(--space-4);
+    font-size: var(--text-base);
+    font-family: var(--font-body);
+    color: var(--color-charcoal);
+    background: #FAFAFA;
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--radius-md);
+    transition: all var(--duration-200) var(--ease-out);
+}
+
+.form__input:hover,
+.form__textarea:hover,
+.form__select:hover {
+    border-color: var(--color-gray-300);
+}
+
+.form__input:focus,
+.form__textarea:focus,
+.form__select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.1);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: var(--color-gray-400);
+}
+
+/* Textarea */
+.form__textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Select */
+.form__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--space-4) center;
+    background-size: 16px;
+    padding-right: var(--space-12);
+    cursor: pointer;
+}
+
+/* Input with icon */
+.form__input-wrapper {
+    position: relative;
+}
+
+.form__input-wrapper .form__input {
+    padding-left: var(--space-12);
+}
+
+.form__input-icon {
+    position: absolute;
+    left: var(--space-4);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--color-gray-400);
+    pointer-events: none;
+}
+
+/* Validation States */
+.form__input.is-valid,
+.form__textarea.is-valid,
+.form__select.is-valid {
+    border-color: var(--color-success);
+}
+
+.form__input.is-invalid,
+.form__textarea.is-invalid,
+.form__select.is-invalid {
+    border-color: var(--color-error);
+}
+
+.form__error {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-error);
+}
+
+.form__error svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Helper Text */
+.form__helper {
+    margin-top: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+}
+
+/* Checkbox & Radio */
+.form__checkbox,
+.form__radio {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    cursor: pointer;
+}
+
+.form__checkbox input,
+.form__radio input {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.form__checkbox-label,
+.form__radio-label {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+    line-height: 1.4;
+}
+
+/* Date Input */
+.form__input[type="date"] {
+    cursor: pointer;
+}
+
+.form__input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* Phone Input with Country Code */
+.form__phone-wrapper {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.form__phone-code {
+    flex-shrink: 0;
+    width: 80px;
+}
+
+.form__phone-number {
+    flex: 1;
+}
+
+/* Form Actions */
+.form__actions {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+}
+
+.form__actions--right {
+    justify-content: flex-end;
+}
+
+.form__actions--center {
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .form__actions {
+        flex-direction: column;
+    }
+
+    .form__actions .btn {
+        width: 100%;
+    }
+}
+
+/* Form Success State */
+.form__success {
+    text-align: center;
+    padding: var(--space-12);
+}
+
+.form__success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-success);
+    border-radius: var(--radius-full);
+    color: var(--color-white);
+}
+
+.form__success-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.form__success-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-3);
+}
+
+.form__success-text {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+}

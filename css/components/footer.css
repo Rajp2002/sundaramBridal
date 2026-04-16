@@ -1,0 +1,212 @@
+/* ==========================================================================
+   Footer Component - Sundaram Bridal Studio
+   ========================================================================== */
+
+.footer {
+    background: var(--color-charcoal);
+    color: var(--color-white);
+    padding: var(--space-16) 0 var(--space-8);
+    scroll-snap-align: start;
+}
+
+.footer__container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: var(--space-12);
+    margin-bottom: var(--space-12);
+}
+
+/* Brand Column */
+.footer__brand {
+    max-width: 300px;
+}
+
+.footer__logo {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--space-4);
+}
+
+.footer__logo-accent {
+    color: var(--color-primary);
+}
+
+.footer__logo-img {
+    display: none; /* Revert to text logo */
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: var(--space-4);
+}
+
+.footer__tagline {
+    font-size: var(--text-base);
+    color: var(--color-gray-400);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+}
+
+/* Social Links */
+.footer__social {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.footer__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    color: var(--color-white);
+    transition: all var(--duration-200) var(--ease-out);
+}
+
+.footer__social-link:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.footer__social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Navigation Columns */
+.footer__column-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    color: var(--color-white);
+    margin-bottom: var(--space-6);
+}
+
+.footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__link {
+    margin-bottom: var(--space-3);
+}
+
+.footer__link a {
+    display: inline-block;
+    font-size: var(--text-base);
+    color: var(--color-gray-400);
+    text-decoration: none;
+    transition: color var(--duration-200);
+}
+
+.footer__link a:hover {
+    color: var(--color-primary);
+}
+
+/* Contact Info */
+.footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    font-size: var(--text-base);
+    color: var(--color-gray-400);
+}
+
+.footer__contact-item svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.footer__contact-item a {
+    color: var(--color-gray-400);
+    text-decoration: none;
+    transition: color var(--duration-200);
+}
+
+.footer__contact-item a:hover {
+    color: var(--color-primary);
+}
+
+/* Footer Bottom */
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--space-8);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__copyright {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+}
+
+.footer__legal {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.footer__legal a {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+    text-decoration: none;
+    transition: color var(--duration-200);
+}
+
+.footer__legal a:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__brand {
+        grid-column: span 2;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding: var(--space-12) 0 var(--space-6);
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer__brand {
+        grid-column: span 1;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        gap: var(--space-4);
+        text-align: center;
+    }
+
+    .footer__legal {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-4);
+    }
+}

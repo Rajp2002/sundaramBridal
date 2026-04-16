@@ -1,0 +1,420 @@
+/* ==========================================================================
+   Package Cards — Bridal Tier System & Background Effects
+   ========================================================================== */
+
+/* ── Royal Background Environments ──────────────────────────────────────── */
+.services-main-wrapper {
+    background: linear-gradient(180deg, var(--color-purple-dark) 0%, #10061E 5%, #15082E 100%);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.services-main-wrapper .section-title {
+    color: var(--color-gold);
+}
+
+.services-main-wrapper .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.services-main-wrapper .eyebrow {
+    color: #b588ffd0; /* Soft bright lavender */
+}
+
+/* ── Decorative Background Blobs ────────────────────────────────────────── */
+.bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-blob--purple {
+    width: 60vw;
+    height: 60vw;
+    max-width: 800px;
+    max-height: 800px;
+    background: radial-gradient(circle, var(--color-purple-light) 0%, transparent 70%);
+}
+
+.bg-blob--gold {
+    width: 50vw;
+    height: 50vw;
+    max-width: 600px;
+    max-height: 600px;
+    background: radial-gradient(circle, var(--color-gold) 0%, transparent 70%);
+}
+
+/* ── Category Tabs ─────────────────────────────────────────────────────── */
+.pkg-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-12);
+    flex-wrap: wrap;
+}
+
+.pkg-tab {
+    padding: var(--space-3) var(--space-6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.05);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: all var(--duration-200) var(--ease-out);
+}
+
+.pkg-tab:hover {
+    border-color: rgba(212, 175, 55, 0.5); /* Gold hover */
+    color: var(--color-gold);
+}
+
+.pkg-tab.is-active {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: #1a1125;
+    font-weight: var(--font-semibold);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* ── Panel visibility ──────────────────────────────────────────────────── */
+.pkg-panel {
+    display: none;
+}
+
+.pkg-panel.is-active {
+    display: block;
+}
+
+/* ── Package Grid (3 cols × 2 rows) ───────────────────────────────────── */
+.pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    align-items: start;
+}
+
+/* ── Individual Package Card ──────────────────────────────────────────── */
+.pkg-card {
+    position: relative;
+    background: linear-gradient(135deg, #2a1b3d 0%, #1f0f2e 100%);
+    border-radius: 20px;
+    padding: var(--space-7);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: var(--color-white);
+}
+
+/* Progressive Tier Backgrounds */
+.pkg-card:nth-child(1) { background: linear-gradient(135deg, #36224d 0%, #2a1b3d 100%); }
+.pkg-card:nth-child(2) { background: linear-gradient(135deg, #2f1d43 0%, #241436 100%); }
+.pkg-card:nth-child(3) { background: linear-gradient(135deg, #2a1b3d 0%, #1f0f2e 100%); } /* Featured */
+.pkg-card:nth-child(4) { background: linear-gradient(135deg, #241436 0%, #1a0a25 100%); }
+.pkg-card:nth-child(5) { background: linear-gradient(135deg, #1f0f2e 0%, #15051d 100%); }
+.pkg-card:nth-child(6) { background: linear-gradient(135deg, #15051d 0%, #0a0110 100%); } /* Luxury */
+
+.pkg-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.15); /* Gold glow */
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Featured card (Most Popular) */
+.pkg-card--featured {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-purple);
+}
+
+.pkg-card--featured:hover {
+    box-shadow: 0 25px 50px rgba(147, 51, 234, 0.25);
+    border-color: var(--color-purple);
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Luxury top-tier card */
+.pkg-card--luxury {
+    border-color: var(--color-charcoal);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: var(--color-white);
+}
+
+.pkg-card--luxury:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.2);
+    border-color: var(--color-gold);
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Badge */
+.pkg-card__badge {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    padding: var(--space-1) var(--space-3);
+    background: var(--gradient-purple);
+    font-size: var(--text-xs);
+    font-weight: var(--font-bold);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    border-radius: var(--radius-full);
+    color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+/* Card header: tier label + price */
+.pkg-card__header {
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pkg-card--luxury .pkg-card__header {
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.pkg-card--featured .pkg-card__header {
+    padding-top: var(--space-6);
+    /* space for badge */
+}
+
+.pkg-card--luxury .pkg-card__header {
+    padding-top: var(--space-6);
+}
+
+.pkg-card__tier {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: var(--font-semibold);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--space-1);
+}
+
+.pkg-card--luxury .pkg-card__tier {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.pkg-card__price {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-semibold);
+    color: var(--color-gold);
+    line-height: 1.1;
+}
+
+.pkg-card--luxury .pkg-card__price {
+    color: var(--color-gold);
+}
+
+.pkg-card--featured .pkg-card__price {
+    color: var(--color-gold);
+}
+
+/* Feature list */
+.pkg-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-6);
+    flex: 1;
+}
+
+.pkg-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.pkg-feature:hover {
+    background: rgba(212, 175, 55, 0.05); /* Gold hover */
+    transform: translateX(4px);
+}
+
+.pkg-card--luxury .pkg-feature {
+    color: rgba(255, 255, 255, 0.85);
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.pkg-feature:last-child {
+    border-bottom: none;
+}
+
+.pkg-feature strong {
+    display: block;
+    font-weight: var(--font-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--space-1);
+}
+
+.pkg-card--luxury .pkg-feature strong {
+    color: var(--color-white);
+}
+
+.pkg-feature__icon {
+    flex-shrink: 0;
+    color: var(--color-purple-light);
+    font-size: var(--text-xs);
+    margin-top: 4px;
+    transition: transform 0.3s ease;
+}
+
+.pkg-feature:hover .pkg-feature__icon {
+    transform: scale(1.2);
+    color: var(--color-gold);
+}
+
+/* Upgrade Highlight */
+.pkg-feature--highlight {
+    background: linear-gradient(90deg, var(--color-purple-50) 0%, transparent 100%);
+    border-left: 2px solid var(--color-purple-light);
+    padding-left: var(--space-3) !important;
+    margin-left: calc(-1 * var(--space-3));
+}
+
+.pkg-highlight-tag {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 var(--space-2);
+    height: 18px;
+    line-height: 18px;
+    background: var(--color-purple-light);
+    color: var(--color-white);
+    font-size: 10px;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
+    margin-left: var(--space-2);
+}
+
+.pkg-card--luxury .pkg-highlight-tag {
+    background: var(--color-primary);
+}
+
+/* Nested sub-list (e.g. makeup brands) */
+.pkg-sub {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-2) 0 0 var(--space-6);
+}
+
+.pkg-sub li {
+    font-size: var(--text-xs);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.pkg-sub li::before {
+    content: '–';
+    color: var(--color-gold);
+    font-weight: var(--font-bold);
+    flex-shrink: 0;
+}
+
+.pkg-card--luxury .pkg-sub li {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* CTA button overrides */
+.pkg-card .btn {
+    width: 100%;
+    margin-top: auto;
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: var(--color-white);
+    transition: all 0.3s ease;
+}
+
+.pkg-card .btn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+/* Featured / Luxury Primary Button */
+.pkg-card--luxury .btn, 
+.pkg-card--featured .btn {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: var(--color-charcoal);
+    font-weight: var(--font-bold);
+}
+
+.pkg-card--luxury .btn:hover, 
+.pkg-card--featured .btn:hover {
+    background: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-charcoal);
+}
+
+/* ── Coming Soon Panel ─────────────────────────────────────────────────── */
+.pkg-coming-soon {
+    text-align: center;
+    padding: var(--space-16) var(--space-8);
+    background: var(--color-cream);
+    border-radius: var(--radius-xl);
+    border: 2px dashed var(--color-purple-light);
+}
+
+.pkg-coming-soon__icon {
+    display: block;
+    font-size: 48px;
+    margin-bottom: var(--space-4);
+}
+
+.pkg-coming-soon h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    color: var(--color-charcoal);
+    margin-bottom: var(--space-3);
+}
+
+.pkg-coming-soon p {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .pkg-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .pkg-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pkg-card {
+        padding: var(--space-6);
+    }
+
+    .pkg-tabs {
+        gap: var(--space-2);
+    }
+
+    .pkg-tab {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-sm);
+    }
+}
