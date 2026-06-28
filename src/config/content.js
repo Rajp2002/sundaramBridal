@@ -197,7 +197,7 @@ export const siteConfig = {
                     features: [
                         { text: 'Makeup', detail: '2× MAC, 1× Bobbi Brown / NARS / Estée Lauder' },
                         { text: '3× Hairstyling', detail: 'Hair Extensions' },
-                        { text: '3× Hair Accessories', detail: 'Flowers, Crystals' },
+                        { text: '3× Hair Accessories' },
                         { text: '3× Lashes' },
                         { text: 'Cream Waxing', detail: 'Hands + Legs' },
                         { text: 'Facial', detail: 'As per skin type' },
@@ -215,7 +215,7 @@ export const siteConfig = {
                     features: [
                         { text: 'Makeup', detail: '2× Bobbi Brown / NARS / Estée Lauder, 1× MAC' },
                         { text: '3× Hairstyling', detail: 'Hair Extensions' },
-                        { text: '3× Hair Accessories', detail: 'Flowers, Crystals' },
+                        { text: '3× Hair Accessories' },
                         { text: '3× Lashes' },
                         { text: 'Cream Waxing', detail: 'Hands + Legs' },
                         { text: 'Facial', detail: 'Glossy Finish' },
@@ -231,14 +231,13 @@ export const siteConfig = {
                     features: [
                         { text: 'Makeup', detail: '2× Bobbi Brown / NARS / Estée Lauder, 1× Laura Mercier / Dior' },
                         { text: '3× Hairstyling', detail: 'Hair Extensions' },
-                        { text: '3× Hair Accessories', detail: 'Flowers, Crystals' },
+                        { text: '3× Hair Accessories' },
                         { text: '3× Lashes' },
                         { text: 'Cream Waxing', detail: 'Hands + Legs' },
                         { text: 'Facial', detail: 'Glossy Finish' },
                         { text: '3× Jewellery', detail: '1× Haldi Jewellery' },
                         { text: '3× Saree / Dupatta Draping' },
                         { text: 'Contact Lens', detail: '3×' },
-                        { text: 'Nail Art' },
                         { text: 'Bridal Makeup Touch-up' }
                     ]
                 },
@@ -248,14 +247,13 @@ export const siteConfig = {
                     features: [
                         { text: 'Makeup', detail: '2× Laura Mercier / Dior, 1× Bobbi Brown / NARS / Estée Lauder' },
                         { text: '3× Hairstyling', detail: 'Hair Extensions' },
-                        { text: '3× Hair Accessories', detail: 'Flowers, Crystals, Moissanite Hair Brooch' },
+                        { text: '3× Hair Accessories' },
                         { text: '3× Lashes' },
                         { text: 'Cream Waxing', detail: 'Full Body (Bikini Wax)' },
-                        { text: 'Advanced Facial', detail: 'O3+ Professional (Glossy Finish)' },
+                        { text: 'Advanced Facial' },
                         { text: '3× Jewellery', detail: '1× Haldi Jewellery' },
                         { text: '3× Saree / Dupatta Draping' },
                         { text: 'Contact Lens', detail: '3×' },
-                        { text: 'Nail Art' },
                         { text: 'Bridal Makeup Touch-up' }
                     ]
                 },
@@ -267,14 +265,13 @@ export const siteConfig = {
                     features: [
                         { text: 'Makeup', detail: '2× Laura Mercier / Dior, 2× Bobbi Brown / NARS / Estée Lauder' },
                         { text: '4× Hairstyling', detail: 'Hair Extensions' },
-                        { text: '4× Hair Accessories', detail: 'Flowers, Crystals, Moissanite Hair Brooch' },
+                        { text: '4× Hair Accessories' },
                         { text: '4× Lashes' },
                         { text: 'Cream Waxing', detail: 'Full Body (Bikini Wax)' },
-                        { text: 'Luxury Facial', detail: 'O3+ Professional / FYC Professional' },
+                        { text: 'Luxury Facial' },
                         { text: '4× Jewellery', detail: '1× Haldi Jewellery' },
                         { text: '4× Saree / Dupatta Draping' },
                         { text: '4× Contact Lens' },
-                        { text: 'Nail Art' },
                         { text: 'Luxury Manicure & Pedicure' },
                         { text: 'Bridal Makeup Touch-up' }
                     ]
@@ -286,8 +283,8 @@ export const siteConfig = {
         // ✨ ENGAGEMENT PACKAGES
         // ------------------------------------------
         engagement: {
-            sectionTitle: 'Engagement Packages',
-            sectionSubtitle: 'Shine at your ring ceremony',
+            sectionTitle: 'Engagement / Baby Shower Packages',
+            sectionSubtitle: 'Shine at your ring ceremony / baby shower',
             items: [
                 {
                     name: 'Tier 1',
@@ -299,7 +296,7 @@ export const siteConfig = {
                         { text: 'Hair Accessories' },
                         { text: 'Eye Lashes' },
                         { text: 'Dupatta Draping' },
-                        { text: 'Contact Lens' }
+                        { text: 'Jewellery' }
                     ]
                 },
                 {
@@ -312,7 +309,7 @@ export const siteConfig = {
                         { text: 'Hair Accessories' },
                         { text: 'Eye Lashes' },
                         { text: 'Dupatta Draping' },
-                        { text: 'Contact Lens' }
+                        { text: 'Jewellery' }
                     ]
                 },
                 {
@@ -322,11 +319,11 @@ export const siteConfig = {
                         { text: 'Makeup', detail: 'Bobbi Brown / NARS / Estée Lauder' },
                         { text: 'International Hairstyling' },
                         { text: 'Hair Extensions' },
-                        { text: 'Hair Accessories', detail: 'Flowers and Crystal' },
+                        { text: 'Hair Accessories' },
                         { text: 'Eye Lashes' },
                         { text: 'Dupatta Draping' },
-                        { text: 'Contact Lens' },
-                        { text: 'Facial', detail: 'FYC Professional' }
+                        { text: 'Jewellery' },
+                        { text: 'Contact Lens' }
                     ]
                 },
                 {
@@ -338,13 +335,11 @@ export const siteConfig = {
                         { text: 'Makeup', detail: 'Dior / Laura Mercier' },
                         { text: 'International Hairstyling' },
                         { text: 'Hair Extensions' },
-                        { text: 'Hair Accessories', detail: 'Flowers and Crystal' },
+                        { text: 'Hair Accessories' },
                         { text: 'Eye Lashes' },
                         { text: 'Dupatta Draping' },
-                        { text: 'Contact Lens' },
-                        { text: 'Facial', detail: 'O3+ Professional' },
-                        { text: 'Glossy Finish' },
-                        { text: 'Waxing', detail: 'Hands and Half Legs' }
+                        { text: 'Jewellery' },
+                        { text: 'Contact Lens' }
                     ]
                 }
             ]
@@ -369,50 +364,53 @@ export const siteConfig = {
                     name: 'Tier 2',
                     price: '₹3,500',
                     features: [
-                        { text: 'Makeup', detail: 'MAC / HUDA' },
+                        { text: 'Makeup', detail: 'MAC' },
                         { text: 'Hairstyling', detail: 'Basic' }
                     ]
                 },
                 {
                     name: 'Tier 3',
-                    price: '₹5,500',
+                    price: '₹4,500',
                     features: [
-                        { text: 'Makeup', detail: 'Bobbi Brown / Nars / Estée Lauder' },
-                        { text: 'Hairstyling', detail: 'Basic' },
-                        { text: 'Hair Extensions' },
-                        { text: 'Dupatta Draping' }
+                        { text: 'Makeup', detail: 'HUDA' },
+                        { text: 'Hairstyling', detail: 'Basic' }
                     ]
                 },
                 {
                     name: 'Tier 4',
-                    price: '₹6,500',
+                    price: '₹5,500',
                     features: [
-                        { text: 'Makeup', detail: 'Dior / Laura Mercier' },
-                        { text: 'Hairstyling' },
-                        { text: 'Hair Extensions' },
-                        { text: 'Eye Lashes' },
+                        { text: 'Makeup', detail: 'Bobbi Brown / Nars / Estée Lauder' },
+                        { text: 'Hairstyling', detail: 'Basic' },
                         { text: 'Dupatta Draping' }
                     ]
                 },
                 {
                     name: 'Tier 5',
+                    price: '₹6,500',
+                    features: [
+                        { text: 'Makeup', detail: 'Dior / Laura Mercier' },
+                        { text: 'Hairstyling' },
+                        { text: 'Eye Lashes' },
+                        { text: 'Dupatta Draping' }
+                    ]
+                },
+                {
+                    name: 'Tier 6',
                     price: '₹8,500',
                     features: [
                         { text: 'Makeup', detail: 'Bobbi Brown / NARS / Estée Lauder' },
                         { text: 'Hairstyling' },
                         { text: 'Hair Extensions' },
-                        { text: 'Hair Accessories', detail: 'Real Flowers, Crystal Brooch' },
+                        { text: 'Hair Accessories' },
                         { text: 'Eye Lashes' },
                         { text: 'Eyebrow Threading' },
-                        { text: 'Contact Lens' },
-                        { text: 'Facial', detail: 'FYC Professional' },
-                        { text: 'Glossy Finish' },
-                        { text: 'Waxing', detail: 'Hands and Half Legs' },
+                        { text: 'Jewellery' },
                         { text: 'Saree / Dupatta Draping' }
                     ]
                 },
                 {
-                    name: 'Tier 6',
+                    name: 'Tier 7',
                     price: '₹10,500',
                     featured: true,
                     badge: 'Luxury Sider',
@@ -420,13 +418,9 @@ export const siteConfig = {
                         { text: 'Makeup', detail: 'Dior / Laura Mercier' },
                         { text: 'Hairstyling' },
                         { text: 'Hair Extensions' },
-                        { text: 'Hair Accessories', detail: 'Real Flowers, Crystal Brooch' },
+                        { text: 'Hair Accessories' },
                         { text: 'Eye Lashes' },
-                        { text: 'Eyebrow Threading' },
-                        { text: 'Contact Lens' },
-                        { text: 'Luxury Facial', detail: 'O3+ Professional' },
-                        { text: 'Glossy Finish' },
-                        { text: 'Waxing', detail: 'Hands and Half Legs + Full Face (Hot Wax)' },
+                        { text: 'Jewellery' },
                         { text: 'Saree / Dupatta Draping' }
                     ]
                 }

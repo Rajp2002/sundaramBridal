@@ -318,11 +318,11 @@ function initServiceDropdown() {
 
     if (pricing.engagement && pricing.engagement.items) {
         const optgroup = document.createElement('optgroup');
-        optgroup.label = 'Engagement Packages';
+        optgroup.label = 'Engagement / Baby Shower Packages';
         pricing.engagement.items.forEach((pkg, index) => {
             const option = document.createElement('option');
             option.value = `engagement-tier-${index + 1}`;
-            option.textContent = `Engagement ${pkg.name} (${pkg.price})`;
+            option.textContent = `Engagement / Baby Shower ${pkg.name} (${pkg.price})`;
             optgroup.appendChild(option);
         });
         serviceSelect.appendChild(optgroup);
